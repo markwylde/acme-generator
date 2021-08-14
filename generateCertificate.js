@@ -64,7 +64,7 @@ async function generateCertificate (config) {
   const acme = ACME.create({ maintainerEmail: config.email, packageAgent, notify });
   await acme.init(config.directoryUrl);
 
-  const { account, accountKey } = await getAcmeAccount(config.directoryUrl, acme, config.email);
+  const { account, accountKey } = await getAcmeAccount(acme, config.email);
 
   // Generate server certificates
   const serverKeypair = await Keypairs.generate({ kty: 'RSA', format: 'jwk' });

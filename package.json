@@ -1,7 +1,7 @@
 {
   "name": "acme-generator",
   "version": "1.0.0",
-  "description": "Create certificates from an acme provider",
+  "description": "Generate dns challenge based certificates from an acme provider",
   "type": "module",
   "main": "index.js",
   "scripts": {
